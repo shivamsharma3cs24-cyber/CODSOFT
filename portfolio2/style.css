@@ -1,0 +1,143 @@
+/*
+  style.css
+  Clean, well-organized CSS for the Portfolio site
+  Uses CSS variables, Flexbox, and Grid for layout and responsiveness
+*/
+:root{
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --primary: #2563eb;
+  --primary-dark: #1e40af;
+  --text: #1f2937;
+  --accent-1: rgba(37,99,235,0.08);
+  --accent-2: rgba(30,64,175,0.06);
+  --muted: #6b7280;
+  --radius: 12px;
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
+body{margin:0;line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+
+/* Header */
+.site-header{background:transparent;padding:1rem 0;position:sticky;top:0;z-index:40}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand .name{margin:0;font-size:1.25rem;font-weight:700}
+.brand .tagline{margin:0;color:var(--muted);font-size:0.9rem}
+.main-nav{display:flex;align-items:center}
+.nav-details{border-radius:10px}
+.nav-links{display:flex;gap:0.5rem}
+.nav-links a{margin-left:0.5rem;text-decoration:none;color:var(--text);padding:0.5rem;border-radius:8px;transition:all .18s}
+.nav-links a:hover{background:var(--card);box-shadow:0 4px 12px rgba(16,24,40,0.06);color:var(--primary)}
+.nav-toggle{display:none;background:transparent;border:none;color:var(--primary);font-weight:700;padding:0.25rem 0.5rem;border-radius:8px}
+
+/* polished header background on scroll */
+.site-header.scrolled{backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));box-shadow:0 6px 20px rgba(16,24,40,0.04)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3.5rem 0;position:relative}
+.hero-decor{position:absolute;right:-60px;top:-30px;width:360px;height:360px;background:radial-gradient(circle at 30% 30%,var(--accent-1),transparent 40%),linear-gradient(135deg,rgba(37,99,235,0.06),rgba(30,64,175,0.03));border-radius:50%;filter:blur(18px);transform:rotate(12deg);z-index:0}
+.hero h2{font-size:2.25rem;margin:0}
+.hero .accent{color:var(--primary);}
+.lead{color:var(--muted);max-width:60ch}
+.hero-image img{width:100%;border-radius:18px;box-shadow:0 18px 40px rgba(16,24,40,0.08);background:linear-gradient(135deg,rgba(37,99,235,0.06),rgba(30,64,175,0.04));position:relative;z-index:2}
+.hero-cta{margin-top:1.25rem}
+.btn{display:inline-block;text-decoration:none;padding:0.6rem 1rem;border-radius:8px;border:1px solid transparent;transition:all .25s;font-weight:600}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,99,235,0.12)}
+.btn.outline{background:transparent;border-color:rgba(30,64,175,0.08);color:var(--primary)}
+.btn.small{padding:0.5rem 0.75rem}
+
+/* Sections */
+.section-title{font-size:1.25rem;margin:0 0 1rem 0}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:220px 1fr;gap:1.5rem;align-items:center}
+.profile-img{width:200px;height:200px;object-fit:cover;border-radius:50%;box-shadow:0 10px 30px rgba(16,24,40,0.06)}
+.about-content p{margin:0 0 0.75rem}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.skill-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.06);display:flex;flex-direction:column;gap:0.75rem}
+.skill-head{display:flex;align-items:center;gap:0.75rem}
+.skill-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 8px 20px rgba(37,99,235,0.12)}
+.progress{background:linear-gradient(180deg,#f1f5f9,#fff);height:10px;border-radius:8px;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--primary-dark));width:0;transition:width 1.2s cubic-bezier(.2,.9,.2,1)}
+.skill-meta{color:var(--muted);font-weight:600}
+
+/* subtle hover lift for cards */
+.skill-card:hover,.project-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(16,24,40,0.08)}
+
+/* Projects hover overlay */
+.project-card{position:relative;overflow:visible}
+.project-card::after{content:"";position:absolute;left:12px;right:12px;top:12px;height:160px;border-radius:10px;pointer-events:none;background:linear-gradient(180deg,rgba(37,99,235,0.02),transparent)}
+.project-card img{height:170px}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(16,24,40,0.06);display:flex;flex-direction:column}
+.project-card img{width:100%;height:160px;object-fit:cover}
+.project-body{padding:1rem;flex:1;display:flex;flex-direction:column;gap:0.5rem}
+
+/* Resume */
+.resume-card{display:flex;gap:1rem;align-items:center;background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.06)}
+.resume-icon{font-size:2rem}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.contact-info p{margin:0 0 0.5rem}
+.contact-form{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.04);display:flex;flex-direction:column;gap:0.5rem}
+.contact-form input,.contact-form textarea{padding:0.6rem;border-radius:8px;border:1px solid #e6e9ee}
+.contact-form button{align-self:flex-start}
+
+/* Responsive nav: show summary on small screens */
+@media (max-width:700px){
+  .nav-links{flex-direction:column;padding:0.5rem 0}
+  .nav-toggle{display:inline-flex}
+  .nav-details[open] .nav-toggle{font-weight:800}
+  .nav-details summary::-webkit-details-marker{display:none}
+  .nav-details summary{cursor:pointer}
+  .main-nav .nav-links a{display:block}
+}
+
+/* Footer */
+.site-footer{border-top:1px solid #eef2f6;padding:1.25rem 0;background:transparent}
+.footer-inner{display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.footer-nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+
+/* Responsive Styles */
+@media (max-width:1000px){
+  .hero{grid-template-columns:1fr 300px}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width:700px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:0.75rem}
+  .main-nav{width:100%}
+  .container{padding:1rem}
+  .hero{grid-template-columns:1fr;}
+  .hero-image{order:-1}
+  .about-grid{grid-template-columns:1fr;grid-template-rows:auto auto}
+  .skills-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+/* Animations: progress bars load on page open */
+@keyframes loadBar{from{width:0}to{width:var(--w)}}
+.p-html{animation:loadBar 1.2s forwards;}
+.p-css{animation:loadBar 1.2s .06s forwards}
+.p-java{animation:loadBar 1.2s .12s forwards}
+.p-c{animation:loadBar 1.2s .18s forwards}
+.p-problem{animation:loadBar 1.2s .24s forwards}
+.p-responsive{animation:loadBar 1.2s .3s forwards}
+.p-git{animation:loadBar 1.2s .36s forwards}
+
+/* Accessibility helpers */
+a:focus,input:focus,button:focus,textarea:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:2px}
+
+/* Utility */
+.text-center{text-align:center}

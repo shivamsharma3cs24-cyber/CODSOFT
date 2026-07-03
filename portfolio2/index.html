@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shivam Sharma — Frontend Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Shivam Sharma — Frontend Web Developer | B.Tech Student — Portfolio">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 class="name">Shivam Sharma</h1>
+        <p class="tagline">Frontend Web Developer | B.Tech Student</p>
+      </div>
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <details class="nav-details">
+          <summary class="nav-toggle" aria-expanded="false">Menu</summary>
+          <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero container">
+      <div class="hero-decor" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h2>Hello, I'm <span class="accent">Shivam Sharma</span></h2>
+        <p class="lead">I build responsive, accessible, and modern web interfaces using clean HTML5 & CSS3. Currently pursuing B.Tech and eager to contribute to real-world frontend projects.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#contact">Hire Me</a>
+          <a class="btn outline" href="resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/profile.svg" alt="Profile placeholder">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about container">
+      <h3 class="section-title">About</h3>
+      <div class="about-grid">
+        <div class="profile">
+          <img class="profile-img" src="images/profile.svg" alt="Profile placeholder">
+        </div>
+        <div class="about-content">
+          <p><strong>Shivam Sharma</strong> is a B.Tech student passionate about frontend development. I enjoy crafting clean user interfaces, learning new web standards, and solving real-world problems with elegant code.</p>
+          <p>Education: Pursuing B.Tech. Interests include Responsive Design, UI/UX, Algorithms, and Performance Optimization. Career goal: become a professional frontend engineer building accessible, maintainable, and scalable web apps.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills container">
+      <h3 class="section-title">Skills</h3>
+      <div class="skills-grid">
+        <!-- Skill Card -->
+        <article class="skill-card">
+          <div class="skill-head">
+            <div class="skill-icon">HTML</div>
+            <h4>HTML5</h4>
+          </div>
+          <div class="progress">
+            <div class="progress-bar p-html" aria-valuenow="95" style="--w:95%"></div>
+          </div>
+          <div class="skill-meta">95%</div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-head">
+            <div class="skill-icon">CSS</div>
+            <h4>CSS3</h4>
+          </div>
+          <div class="progress">
+            <div class="progress-bar p-css" aria-valuenow="90" style="--w:90%"></div>
+          </div>
+          <div class="skill-meta">90%</div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-head">
+            <div class="skill-icon">☕</div>
+            <h4>Java</h4>
+          </div>
+          <div class="progress">
+            <div class="progress-bar p-java" aria-valuenow="80" style="--w:80%"></div>
+          </div>
+          <div class="skill-meta">80%</div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-head">
+            <div class="skill-icon">C</div>
+            <h4>C Programming</h4>
+          </div>
+          <div class="progress">
+            <div class="progress-bar p-c" aria-valuenow="75" style="--w:75%"></div>
+          </div>
+          <div class="skill-meta">75%</div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-head">
+            <div class="skill-icon"><> </div>
+            <h4>Problem Solving</h4>
+          </div>
+          <div class="progress">
+            <div class="progress-bar p-problem" aria-valuenow="85" style="--w:85%"></div>
+          </div>
+          <div class="skill-meta">85%</div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-head">
+            <div class="skill-icon">📱</div>
+            <h4>Responsive Design</h4>
+          </div>
+          <div class="progress">
+            <div class="progress-bar p-responsive" aria-valuenow="92" style="--w:92%"></div>
+          </div>
+          <div class="skill-meta">92%</div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-head">
+            <div class="skill-icon">git</div>
+            <h4>Git & GitHub</h4>
+          </div>
+          <div class="progress">
+            <div class="progress-bar p-git" aria-valuenow="88" style="--w:88%"></div>
+          </div>
+          <div class="skill-meta">88%</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects container">
+      <h3 class="section-title">Projects</h3>
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="images/project1.svg" alt="Project placeholder">
+          <div class="project-body">
+            <h4>Project One</h4>
+            <p>A responsive landing page built with semantic HTML and modern CSS layout techniques.</p>
+            <a class="btn small" href="#">View Project</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project2.svg" alt="Project placeholder">
+          <div class="project-body">
+            <h4>Project Two</h4>
+            <p>An interactive CSS-only component library demonstrating animations and accessibility.</p>
+            <a class="btn small" href="#">View Project</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project3.svg" alt="Project placeholder">
+          <div class="project-body">
+            <h4>Project Three</h4>
+            <p>A small web app mockup showcasing responsive grids and performance-minded CSS.</p>
+            <a class="btn small" href="#">View Project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume container">
+      <h3 class="section-title">Resume</h3>
+      <div class="resume-card">
+        <div class="resume-icon">📄</div>
+        <div class="resume-body">
+          <p>Download my up-to-date resume to see projects, education, and experience.</p>
+          <a class="btn" href="resume.pdf" download>Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact container">
+      <h3 class="section-title">Contact</h3>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><strong>Name:</strong> Shivam Sharma</p>
+          <p><strong>Email:</strong> <a href="mailto:shivam@example.com">shivam@example.com</a></p>
+          <p><strong>Phone:</strong> +91-9876543210</p>
+          <p><strong>Location:</strong> New Delhi, India</p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/shivam" target="_blank" rel="noopener">github.com/shivam</a></p>
+          <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">linkedin.com/in/shivam</a></p>
+        </div>
+
+        <form class="contact-form" action="#" method="post" onsubmit="return false;">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+          <button class="btn primary" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Shivam Sharma. All rights reserved.</p>
+      <p>Made with ❤️ using HTML &amp; CSS</p>
+      <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
